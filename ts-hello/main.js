@@ -27,3 +27,4 @@ var point = new Point(1, 2);
 var x = point.X;
 point.X = 10;
 point.draw();
+
