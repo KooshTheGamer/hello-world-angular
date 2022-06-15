@@ -6,12 +6,24 @@ var Point = /** @class */ (function () {
     Point.prototype.draw = function () {
         console.log('X: ' + this.x + ' Y: ' + this.y);
     };
+    Object.defineProperty(Point.prototype, "X", {
+        get: function () {
+            return this.x;
+        },
+        set: function (value) {
+            if (value < 0)
+                throw new Error('value cannot be less than 0.');
+            this.x = value;
+        },
+        enumerable: false,
+        configurable: true
+    });
     Point.prototype.getDistance = function (another) {
         // ... 
     };
     return Point;
 }());
 var point = new Point(1, 2);
-point.x = 1;
-point.y = 2;
+var x = point.X;
+point.X = 10;
 point.draw();

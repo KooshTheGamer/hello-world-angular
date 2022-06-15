@@ -1,14 +1,20 @@
 class Point {
-    x: number;
-    y: number;
-
-    constructor(x?: number, y?: number) {
-        this.x = x;
-        this.y = y;
+    constructor(private x?: number, private y?: number) {
     }
     
     draw() {
         console.log('X: ' + this.x + ' Y: ' + this.y);
+    }
+
+    get X(){
+        return this.x;
+    }
+
+    set X(value){
+        if (value < 0)
+            throw new Error('value cannot be less than 0.');
+
+        this.x = value;
     }
 
     getDistance(another: Point) {
@@ -17,6 +23,7 @@ class Point {
 }
 
 let point = new Point(1, 2);
-point.x = 1;
-point.y = 2;
+
+let x = point.X
+point.X = 10;
 point.draw();
