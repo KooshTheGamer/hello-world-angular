@@ -1,14 +1,6 @@
-function doSomething() {
-    for (let i =0; i < 5; i++) {
-        console.log(i);
-    }
-
-    console.log('Finally: ' + i);
-}
-// i is declared to the nearest function when decalred as a "var"
-//when declaring variables, declaring them as a type, will assign it to its block
-doSomething();
+const ColorRed = 0;
 
 
-
+enum Color { Red = 0, Green = 1, Blue = 2, Purple = 3 };
+let backgroundColor = Color.Red;
 
