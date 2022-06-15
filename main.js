@@ -1,10 +1,17 @@
-var ColorRed = 0;
-var Color;
-(function (Color) {
-    Color[Color["Red"] = 0] = "Red";
-    Color[Color["Green"] = 1] = "Green";
-    Color[Color["Blue"] = 2] = "Blue";
-    Color[Color["Purple"] = 3] = "Purple";
-})(Color || (Color = {}));
-;
-var backgroundColor = Color.Red;
+var Point = /** @class */ (function () {
+    function Point(x, y) {
+        this.x = x;
+        this.y = y;
+    }
+    Point.prototype.draw = function () {
+        console.log('X: ' + this.x + ' Y: ' + this.y);
+    };
+    Point.prototype.getDistance = function (another) {
+        // ... 
+    };
+    return Point;
+}());
+var point = new Point(1, 2);
+point.x = 1;
+point.y = 2;
+point.draw();

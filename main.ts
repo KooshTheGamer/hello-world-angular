@@ -1,6 +1,22 @@
-const ColorRed = 0;
+class Point {
+    x: number;
+    y: number;
 
+    constructor(x?: number, y?: number) {
+        this.x = x;
+        this.y = y;
+    }
+    
+    draw() {
+        console.log('X: ' + this.x + ' Y: ' + this.y);
+    }
 
-enum Color { Red = 0, Green = 1, Blue = 2, Purple = 3 };
-let backgroundColor = Color.Red;
+    getDistance(another: Point) {
+        // ... 
+    }
+}
 
+let point = new Point(1, 2);
+point.x = 1;
+point.y = 2;
+point.draw();
